@@ -1,0 +1,4 @@
+----- Membri -----	||| 	-----	Ruoli ------
+Brega Pietro		|||		Testing
+Lazzarini Roberto	|||		Progettazione su carta
+Cattaneo Kevin		|||		Coding
