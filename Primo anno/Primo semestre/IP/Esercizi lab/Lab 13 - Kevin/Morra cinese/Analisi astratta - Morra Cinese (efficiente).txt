@@ -1,0 +1,28 @@
+Analisi astratta (efficiente): algoritmo Morra Cinese - Cattaneo Kevin
+
+// L'algoritmo funziona con due giocatori le cui giocate sono inserite in input
+// C, F, S sono i gesti
+
+INSERISCI G1
+INSERISCI G2
+SE (G1 = G2)
+	STAMPA ("Parità")
+ALTRIMENTI
+	SE (G1 = F)
+		SE (G2 = C)
+			STAMPA ("Vince G1")
+		ALTRIMENTI 
+			STAMPA ("Vince G2") // So già che G2 = S, non F perchè sarebbe pari a G1.
+	ALTRIMENTI
+		SE (G1 = S)
+			SE (G2 = F)
+				STAMPA ("Vince G1")
+			ALTRIMENTI 
+				STAMPA ("Vince G2")
+		ALTRIMENTI
+			SE (G2 = F)  // A questo punto so che G1 = C, perchè ho escluso le altre, e quindi nemmeno G2 è C.
+				STAMPA ("Vince G2")
+			ALTRIMENTI 
+				STAMPA ("Vince G1")
+	
+				

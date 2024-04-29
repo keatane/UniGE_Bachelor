@@ -1,0 +1,18 @@
+Analisi astratta (poco efficiente): algoritmo Morra Cinese - Cattaneo Kevin
+
+INSERISCI Gesto_Giocatore
+Gesto_Computer = RANDOM (SCELTA FRA "Carta", "Forbice", "Sasso")
+SE (Gesto_Giocatore = Gesto_Computer) 
+	STAMPA ("Parità")
+ALTRIMENTI SE (Gesto_Giocatore = "Carta") AND (Gesto_Computer = "Forbice")
+	STAMPA ("Hai perso")
+ALTRIMENTI SE (Gesto_Giocatore = "Carta") AND (Gesto_Computer = "Sasso")
+	STAMPA ("Hai vinto")
+ALTRIMENTI SE (Gesto_Giocatore = "Forbice") AND (Gesto_Computer = "Carta")
+	STAMPA ("Hai vinto")
+ALTRIMENTI SE (Gesto_Giocatore = "Forbice") AND (Gesto_Computer = "Sasso")
+	STAMPA ("Hai perso")
+ALTRIMENTI SE (Gesto_Giocatore = "Sasso") AND (Gesto_Computer = "Carta")
+	STAMPA ("Hai perso")
+ALTRIMENTI SE (Gesto_Giocatore = "Sasso") AND (Gesto_Computer = "Forbice")
+	STAMPA ("Hai vinto")
