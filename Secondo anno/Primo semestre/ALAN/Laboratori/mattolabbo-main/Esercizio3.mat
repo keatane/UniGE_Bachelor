@@ -1,0 +1,79 @@
+function vk = metodo_potenze(v0, A)
+	Av = A*v0;
+	Vprev = zeros(size(v0),1);
+	vk = Av/norm(Av);
+	disp(' ')
+	k=0;
+	while norm(vk-Vprev)/norm(vk) >= 0.01 % soglia dell'1% di varianza fra i due vettori
+		Av = A*vk;
+		Vprev = vk;
+		vk = Av/norm(Av);
+	end
+end
+
+function vk = metodo_potenze_inverse(v0, A, p)
+	
+	B = (A-p*eye(size(A)))^-1;
+	Av = B*v0;
+	Vprev = zeros(size(v0),1);
+	vk = Av/norm(Av);
+	
+	disp(' ')
+	k=0;
+	while norm(abs(vk)-abs(Vprev))/norm(vk) >= 0.01 % soglia dell'1% di varianza fra i due vettori
+		Av = B*vk;
+		Vprev = vk;
+		vk = Av/norm(Av);
+		%norm(vk-Vprev)/norm(vk)
+	end
+	
+end
+
+v0t = [1 1 1];
+v1t = [3 10 4];
+A = [1 -1 2;
+	-2 0 5;
+	6 -3 6];
+
+v0 = transpose(v0t);
+v1 = transpose(v1t);
+
+% Con le seguenti stampe verifico:
+% - gli autovettori di A, e tra questi prendo l'autovettore di norma maggiore
+% - gli autovalori di A, [??? il massimo dovrebbe corrispondere, a livello di indice, all'autovettore di norma maggiore]
+% - infine il vk ottenuto dall'iterazione, questo dovrebbe somigliare (approssimazione) all'ev di norma maggiore di cui sopra
+
+fprintf('\n### Metodo delle potenze ###\n')
+fprintf('\n### Primo vettore ###\n')
+v0
+evMax = metodo_potenze(v0,A)
+ewMax = (transpose(evMax)*(A*evMax))/(transpose(evMax)*evMax) % quoziente di Rayleigh %
+evMax = metodo_potenze_inverse(v0,A,6)
+ewMax = (transpose(evMax)*(A*evMax))/(transpose(evMax)*evMax)
+evX = metodo_potenze_inverse(v0,A,0) % trovo quello di autovalore minimo %
+ewX = (transpose(evX)*(A*evX))/(transpose(evX)*evX)
+evY = metodo_potenze_inverse(v0,A,(ewX+ewMax)/2)
+ewY = (transpose(evY)*(A*evY))/(transpose(evY)*evY)
+
+[ev,ew] = eig(A)
+
+velox = (ewY/ewMax);
+fprintf('Velocità di convergenza: %f^k\n', velox)
+
+
+fprintf('\n### Secondo vettore ###\n')
+vk = metodo_potenze(v1,A);
+
+v1
+evMax = metodo_potenze(v1,A)
+ewMax = (transpose(evMax)*(A*evMax))/(transpose(evMax)*evMax) % quoziente di Rayleigh %
+evMax = metodo_potenze_inverse(v1,A,6)
+ewMax = (transpose(evMax)*(A*evMax))/(transpose(evMax)*evMax)
+evX = metodo_potenze_inverse(v1,A,0) % trovo quello di autovalore minimo %
+ewX = (transpose(evX)*(A*evX))/(transpose(evX)*evX)
+evY = metodo_potenze_inverse(v1,A,(ewX+ewMax)/2)
+ewY = (transpose(evY)*(A*evY))/(transpose(evY)*evY)
+
+velox = (ewY/ewMax);
+fprintf('Velocità di convergenza: %f^k\n', velox)
+
