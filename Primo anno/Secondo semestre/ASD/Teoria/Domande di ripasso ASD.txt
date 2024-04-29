@@ -1,0 +1,188 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ASD - Domande tipo quiz ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+================================================= BASI ==================================================
+0. Cos'è un algoritmo?
+1. Spiega brevemente i concetti di encapsulation e information hiding.
+2. Cos'è il principio di induzione? Con cosa presenta anologie in ambito informatico?
+3. Ordina le seguenti funzioni notevoli secondo il loro andamento asintotico, da quello più veloce al più
+lento: n, nlog(n), log(n), 2^n, 1 (o costante generica), n^n, n^2, sqrt(n)
+4. Spiega brevemente le leggi di De Morgan
+5. In cosa consiste l'approccio divide et impera? Cita almeno un algoritmo che segue questo approccio.
+6. Spiega brevemente il funzionamento dell'algoritmo di ricerca binaria, compresi i requisiti.
+
+======================================= ANALISI DI COMPLESSITA' =========================================
+7. Da cosa è dato il tempo di esecuzione di un algoritmo?
+8. Cosa si intende con analisi asintotica del tempo di esecuzione?
+9. Perché si sceglie di trascurare le costanti moltiplicative?
+10. Spiega brevemente la notazione Big-O.
+11. Spiega brevemente la notazione Omega.
+12. Spiega brevemente la notazione Theta.
+13. Quale delle 3 notazioni è la più precisa? Perché?
+14. Dai una definizione di Theta in termini di Omega e Big-O.
+15. Perché si dice che la complessità di una certa funzione "appartiene" a Big-O/Omega/Theta?
+16. Esiste una qualche correlazione tra i concetti di caso migliore/medio/peggiore e Big-O/Theta/Omega?
+17. Cos'è un algoritmo adattivo?
+
+=============================== COMPLESSITA' DEGLI ALGORITMI DI SORTING =================================
+18. Qual è la complessità di selection sort? Motiva la risposta.
+19. Selection sort è un algoritmo adattivo? Se sì, motiva la complessità del caso migliore e peggiore.
+20. Qual è la complessità di insertion sort? Motiva la risposta.
+21. Selection sort è un algoritmo adattivo? Se sì, motiva la complessità del caso migliore e peggiore.
+22. Qual è la complessità di bubble sort? Motiva la risposta.
+23. Bubble sort è un algoritmo adattivo? Se sì, motiva la complessità del caso migliore e peggiore.
+24. Qual è la complessità dell'algoritmo di ricerca binaria? Motiva la risposta.
+25. L'algoritmo di ricerca binaria è adattivo? Se sì, motiva la complessità del caso migliore e peggiore.
+26. Qual è la complessità di merge sort? Da che operazioni dipende? Che complessità hanno le operazioni?
+27. Merge sort è un algoritmo adattivo? Se sì, motiva la complessità del caso migliore e peggiore.
+28. Qual è l'intuizione di base dietro all'algoritmo di quicksort?
+29. Come avviene la scelta del pivot?
+30. Che differenza c'è tra la complessità di mergesort e di quicksort in termini di spazio?
+31. Qual è la complessità di quicksort? Da che operazioni dipende quicksort?
+32. Quick sort è un algoritmo adattivo? Se sì, motiva la complessità del caso migliore, medio e peggiore.
+
+==================================== TIPI DI DATO E STRUTTURE DATI ======================================
+33. Cos'è un tipo di dato?
+34. Cos'è una struttura dati?
+35. Cos'è un tipo (o sort)?
+36. Cos'è un dato?
+37. Cos'è il tipo di dato lista?
+
+============================= VARI TIPI DI DATO E OPERAZIONI SUGLI STESSI ===============================
+~ List ~
+38. Quali sono le operazioni fondamentali sul tipo di dato lista?
+39. Che complessità hanno quando il TDD è implementato... (Giustifica le risposte)
+39a. con linked lists?
+39b. con array dinamici con size e maxsize?
+39bb. A cosa è dovuta la complessità del caso peggiore di insert e delete in questo caso?
+39c. con liste doppiamente collegate, circolari e con sentinella?
+39cc. Quali operazioni sono più efficienti utilizzando questa struttura dati rispetto alle liste semplici?
+40. Che sort coinvolgono?
+41. Qual è la differenza tra operazioni stateful e stateless?
+42. Tra le due opzioni, qual è quella solitamente più efficiente? Qual è quella più vicina all'idea 
+algebrica di funzione? Motiva la risposta.
+
+~ Stack ~
+43. Cos'è il tipo di dato stack?
+44. Come viene definito il comportamento delle funzioni di input/output degli stack?
+45. Quali sono le operazioni fondamentali sul tipo di dato stack?
+46. Che complessità hanno quando il TDD è implementato... (Giustifica le risposte)
+46a. con linked lists?
+46b. con array dinamici con size e maxsize? 
+46. Che sort coinvolgono?
+
+~ Queue ~
+47. Cos'è il tipo di dato queue?
+48. Come viene definito il comportamento delle funzioni di input/output delle queue?
+49. Quali sono le operazioni fondamentali sul tipo di dato queue?
+50. Che complessità hanno quando il TDD è implementato... (Giustifica le risposte)
+50a. con linked lists?
+50aa. E' possibile implementare push e poi in modo che abbiano la stessa complessità nel caso peggiore?
+50b. con array dinamici con size e maxsize?
+50c. con liste doppiamente collegate, circolari e con sentinella? 
+51. Che sort coinvolgono?
+
+~ Set ~
+52. Cos'è il tipo di dato set?
+53. Che limite hanno in informatica rispetto agli insiemi algebrici?
+54. Quali sono le operazioni fondamentali sul tipo di dato set?
+55. Che complessità hanno quando il TDD è implementato... (Giustifica le risposte)
+55a. con linked lists?
+55b. con array dinamici con size e maxsize? Cosa cambierebbe se l'array fosse ordinato?
+55c. con liste doppiamente collegate, circolari e con sentinella? 
+55abc. Spiega, in particolare, la complessità di setUnion, setIntersection, setDifference e isSubset e le loro possibili ottimizzazioni nelle tre strutture dati sopracitate. 
+55d. con bit vector?
+55e. con tabelle di hash?
+56. Che sort coinvolgono?
+
+~ Dictionary ~
+57. Cos'è il tipo di dato dictionary?
+58. Quali sono le operazioni fondamentali sul tipo di dato dictionary?
+59. Che complessità hanno quando il TDD è implementato... (Giustifica le risposte)
+59a. con tabelle di hash?
+60. Che sort coinvolgono
+
+~ Tree ~
+61. Quali sono le operazioni fondamentali sul tipo di dato tree?
+62. Che complessità hanno quando il TDD è implementato... (Giustifica le risposte)
+62b. con array dinamici con size e maxsize?
+62c. con alberi? 
+63. Che sort coinvolgono?
+
+~ Graph ~
+64. Cos'è il tipo di dato graph?
+65. Quali sono le operazioni fondamentali sul tipo di dato graph?
+66. Che complessità hanno quando il TDD è implementato... (Giustifica le risposte)
+66a. con liste di adiancenza con vertici memorizzati in array?
+66b. con liste di adiancenza con vertici memorizzati in liste collegate?
+66c. con matrici di adiacenza?
+67. Che sort coinvolgono?
+68. Cosa si intende con grafo orientato?
+69. Cosa si intende con vertici adiacenti?
+70. Cosa si intende con archi incidenti?
+71. Cosa si intende con grado del vertice? Come varia rispetto a grafi orientati e non?
+72. Cos'è un cammino?
+73. Cos'è un ciclo?
+74. Cosa si intende con grafo etichettato?
+74. Cosa si intende con grafo connesso?
+76. Cosa si intende con albero libero?
+77. Cosa si intende con grafo completo?
+78. Cos'è un sottografo?
+79. Quando si dice che sottografo è proprio o improprio?
+80. Cosa si intende con spanning graph o grafo di ricoprimento?
+81. Cosa si intende con spanning tree o albero di ricoprimento?
+82. Perché può essere importante individuare alberi di ricoprimento in un grafo? 
+
+~ Priority Queue ~
+83. Cos'è il tipo di dato priority queue?
+84. Quali sono le operazioni fondamentali sul tipo di dato priority queue?
+85. Che complessità hanno quando il TDD è implementato... (Giustifica le risposte)
+85a. con liste di adiancenza con liste collegate?
+85b. con liste di adiancenza con heap binari?
+86. Che sort coinvolgono?
+
+======================================= STRUTTURE DATI NOTEVOLI =========================================
+~ Bit vector, tabelle ad accesso diretto ~
+87. Cos'è un bit vector?
+88. Perché viene utilizzato?
+89. Che limiti presenta?
+90. Cos'è una tabella ad accesso diretto?
+91. Che limiti presenta? 
+92. Come viene scelto l'insieme delle chiavi per le due strutture dati sopracitate?
+93. Cos'è il fattore di carico di una struttura dati? Come si calcola?
+
+~ Hash tables ~
+94. Cos'è una tabella di hash?
+95. Come viene scelto l'insieme delle chiavi per le tabelle di hash?
+96. Come avviene il collegamento tra chiave ed indice?
+97. Cos'è una funzione di hash e che proprietà deve necessariamente avere?
+98. Cos'è il fenomeno delle collisioni e come risolto arginato il problema che ne deriva?
+
+~ Tree ~
+99. Cosa si intende con albero radicato?
+100. Cosa si intende con radice di un albero? Che proprietà ha?
+101. Cosa si intende con grado di un nodo?
+102. Cosa si intende con padre di un nodo?
+103. Cosa si intende con figlio di un nodo?
+104. Cosa si intende con foglia?
+105. Cosa si intende con nodo interno?
+106. Cosa si intende con antenati di un nodo?
+107. Cosa si intende con livello o profondità?
+108. Quando due nodi vengono definiti fratelli?
+109. Cosa si intende con altezza?
+110. Cosa sono gli alberi d-ari e che proprietà hanno?
+111. Cosa si intende con albero d-ario completo?
+112. Cosa si intende d-ario quasi completo?
+113. Di che proprietà godono gli alberi d-ari (quasi-)completi?
+114. Cos'è un Binary Search Tree (BST)? 
+115. Che proprietà ha? 
+116. Elenca i tipi di dato che permette di implementare.
+117. Spiega in particolare come vengono implementate le funzioni insert e delete.
+118. Cosa si intende per visita di un albero?
+119. Cosa si intende con Breadth First Search (BFS)?
+120. Che struttura dati di supporto viene usata nella versione iterativa di una BFS?
+121. Cosa si intende con Depth First Search (DFS)?
+122. Che struttura dati di supporto viene usata nella versione iterativa di una DFS?
+
+================================================ CENNI ==================================================
+123. Cosa sono gli alberi rosso-neri?
+124. Cosa sono gli alberi AVL?
+125. A cosa serve l'algoritmo di Dijkstra?
