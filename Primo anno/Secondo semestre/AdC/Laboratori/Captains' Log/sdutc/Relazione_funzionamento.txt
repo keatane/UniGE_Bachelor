@@ -1,0 +1,8 @@
+Il programma write_log esegue correttamente quanto richiesto, soddisfando sia la parte obbligatoria che facoltativa.
+La stampa che si ottiene è divisa in tre parti:
+- la prima parte consiste nella data relativa al lancio del programma per scrivere il messaggio passato come secondo parametro;
+- la seconda parte è il messaggio da stampare, eventualmente troncato se eccede la dimensione riservata al buffer
+- la terza parte consiste nella data relativa al momento in cui effettivamente viene scritto il messaggio richiesto (mediante un ritardo manuale è possibile verificare come
+il tempo di lancio del programma e di effettiva scrittura siano diversi).
+
+
