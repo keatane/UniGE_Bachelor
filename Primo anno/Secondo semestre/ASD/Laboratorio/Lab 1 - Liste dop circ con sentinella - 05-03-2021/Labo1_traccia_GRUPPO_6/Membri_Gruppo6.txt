@@ -1,0 +1,6 @@
+--------------------------------------------------------------------
+	Membri gruppo		|||		Ruolo
+--------------------------------------------------------------------
+	Brega Pietro		|||		Testing
+	Lazzarini Roberto	|||		Progettista su carta
+	Cattaneo Kevin		|||		Coding
