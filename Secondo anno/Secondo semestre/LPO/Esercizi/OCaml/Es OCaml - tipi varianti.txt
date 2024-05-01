@@ -1,0 +1,26 @@
+@@@@@@ ES1 @@@@@
+type shape = Square of float | Circle of float | Rectangle of float * float;;
+
+let area = function Square l -> Float.mul l l 
+                  | Circle l -> Float.mul (Float.mul l l) 3.14 
+                  | Rectangle (b, h) -> Float.mul b h;;
+
+area (Rectangle (4.0,3.0));;
+
+
+
+@@@@@@ ES2 @@@@@
+let max_el = let rec aux x = function h::tail -> aux(Stdlib.max x h) tail | _ -> x
+  in function x::t -> Option.Some (aux x t) | _ -> Option.None;;
+
+max_el ([4;5;2;1]);;
+
+
+
+@@@@@@ ES3 @@@@@
+type bool_exp_ast = BoolLit of bool | Not of bool_exp_ast | And of bool_exp_ast * bool_exp_ast | Or of bool_exp_ast * bool_exp_ast;; 
+
+let rec eval = function BoolLit b -> b | Not b -> Bool.not (eval b) | And (b,c) -> eval b && eval c | Or (b,c) -> eval b || eval c;;
+
+let ast = Not(And(BoolLit true,Or(BoolLit false,BoolLit false)));; (* ast di !(true && (false || false)) *)
+eval ast;;

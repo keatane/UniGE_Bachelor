@@ -1,0 +1,20 @@
+
+open List
+
+(* 1 *)
+let rec unzip = function (x,y)::t -> x::unzip t | _ -> [];;
+
+unzip [(1,"one"); (2,"two")];;
+
+
+(* 2 *)
+let unzip l =
+  let rec aux acc = function (x,y)::t -> aux (x::acc) t | _ -> List.rev(acc) in aux [] l;; 
+
+  
+unzip [(1,"one"); (2,"two")];;
+
+(* 3 *) 
+let unzip l = List.map (fun (x,y)->x) l;;
+
+unzip [(1,"one"); (2,"two")];;
