@@ -1,0 +1,10 @@
+NESTED LOOP JOIN: sempre - B(R) + T(R) * B(S)
+BLOCK NESTED LOOP: sempre - B(R) + B(R) * B(S)
+INDEX NESTED LOOP: se c'è idx su attributo di join - B(R) + T(R) * costo del cammino d'accesso su S con idx
+MERGE JOIN: se entrambe le relazioni sono ordinate rispetto all'attributo di join e su equi-join - B(R) + B(S)
+HASH JOIN: solo su equi-join - B(R) + B(S)
+--------------------------------------------------------------------------------------------
+SELEZIONE: SEQ SCAN sempre, IDX SCAN se c'è indice (non su A <> 5) e su fattore booleano
+PROIEZIONE senza eliminazione duplicati: sempre fattibile, iterativamente
+PROIEZIONE con eliminazione dup.: o con LEAF SCAN (se c'è idx ordinato su attributo da proiettare) o con ordinamento
+ORDINAMENTO: o con ordinamento pregresso del B+ tree (se clusterizzato conviene, sennò ordino i RID) o con Merge esterno
