@@ -1,0 +1,39 @@
+Valutazione esempio - Cattaneo Kevin
+
+1) 5/5
+Viene rispettata la sintassi di un diagramma ER
+
+2) 3/5
+Lo schema non presenta l'usuale rappresentazione per gli identificatori per nessuna delle entità (pallino pieno)
+L'entità AREA non presenta un identificatore significativo (il 'nome' è un attributo molto generico e a seconda del contesto potrebbe
+ripetersi). Si suggerisce dunque l'ausilio di un codice univoco per tale entità.
+
+3) 5/5
+Entità e associazioni presentate in modo chiaro
+
+4) 4/5
+Si ritiene necessario cambiare la cardialità da parte di PARTECIPANTE verso INTERESSA
+da (1,n) a (0,n) questo per ridurre il vincolo sull'individuo accettando anche nessun interesse per alcuna AREA
+(oppure un interesse per un'area non ancora presente nel database).
+Inoltre si potrebbe rilassare il vincolo che un CORSO è insegnato al più da un DOCENTE, ammettendone molteplici.
+
+5) 3/5
+Lo schema omette un dominio importante. In particolare non viene specificato il dominio di valori che può assumere
+l'attributo livello per DIPENDENTE. Si suggerisce un dominio di caratteri lungo a seconda delle esigenze, ad esempio
+dalla A alla D.
+Inoltre, se si fa riferimento al contesto visto a lezione, sull'attributo 'giudizio' dell'associazione FREQUENTA non viene specificato che, dopo un mese
+dalla data di partecipazione della persona a un corso, il giudizio per quel corso diviene obbligatorio e non più opzionale.
+Si suggerisce inoltre, sempre sull'associazione FREQUENTA, un attributo che indichi la data di partecipazione al corso (eventualmente aggiornando tale
+attributo con la frequentazione più recente, utile se si vuole verificare la scadenza di eventuali coperture/certificazioni fornite dal CORSO in certi ambiti
+(es. sicurezza sul lavoro)).
+
+6) 4/5
+Lo schema potrebbe specificare meglio l'attributo 'sesso' di PARTECIPANTE, in particolare se questo è una lettera
+oppure una stringa e le varie possibili declinazioni che questo attributo potrà assumere (ad esempio maschio, femmina o non specificato)
+
+7) 4/5
+Nel complesso, con le giuste correzioni, lo schema è una buona base per procedere alla fase di ristrutturazione.
+
+Feedback complessivo
+Le conoscenze di base sono solide seppur passano sopra su alcuni dettagli dello schema non omettibili.
+Si suggerisce infine una minore 'rigidità' sui vincoli fra entità e associazioni.
