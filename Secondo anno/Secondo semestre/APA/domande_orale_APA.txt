@@ -1,0 +1,13 @@
+Complessità di problemi, problemi aperti e chiusi
+Algoritmo di Dijkstra (n+m)logn
+Definizione di minimo albero ricoprente, algoritmi di Prim e Kruskal  (n+m)logn, mlogm
+Definizione di ordinamento topologico, i due algoritmi per calcolarlo  (n+m)
+Definizione di componenti fortemente connesse, l'algoritmo per calcolarle  (n+m)
+Caratteristiche della programmazione dinamica, problema LCS e algoritmo per risolverlo, algoritmo di Floyd-Warshall   (m*n), n^3 (ott solo spazio: n^2)
+Definizioni di problema di decisione, astratto e concreto, algoritmo di verifica, classi P, NP e NP-C
+Nozione di riduzione polinomiale, definizione di classe NP-C, problema P-NP
+Esempi di problemi NP-completi e riduzioni (SAT, 3SAT, CLIQUE)
+
+NB: per ogni algoritmo si richiede: descrizione informale, pseudocodice (NON A MEMORIA, ma essere in grado di ricostruirlo), analisi di complessità e (per voti alti) prova di correttezza
+
+
