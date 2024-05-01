@@ -1,0 +1,40 @@
+h1{
+    font-size: 3em;
+    color: crimson;
+}
+
+body{
+    text-align: center;
+    background-color: yellowgreen;
+}
+
+img{
+    border: solid;
+    border-width: 15px;
+    border-color: brown;
+    border-radius: 15px;
+    rotate: 40deg;
+    scale: 1.5;
+}
+
+#navbar{
+    border: solid;
+    border-width: 10px;
+    border-color: tomato;
+    border-radius: 15px;
+    background-color: blueviolet;
+}
+
+a:hover{
+    color: blueviolet;
+}
+
+a:visited{
+    color: blueviolet;
+}
+
+button{
+    background-color: yellow;
+    rotate: 90deg;
+}
+

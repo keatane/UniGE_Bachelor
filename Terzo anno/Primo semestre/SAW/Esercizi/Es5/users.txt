@@ -1,0 +1,3 @@
+Kevin;Levin;kevin@gmail.com;$2y$10$eTB.2xqolJ3sbvt57ZMpuuNxbPxdcDNofU4LgYZVBPDBLh5aWVLx2;
+Mario;Rossi;mario@gmail.com;$2y$10$0tQZgXeKlTfotb8QJkUvoOWUlsyDejvat/KR4cg5Ta2/y70mJHVbe;
+Luisa;Naro;issah@gmail.com;$2y$10$sMZhxYEF269QoxyRpr1ItO39MeoWh6z0QaDdgUo9CuaGUPGgCxBXq;

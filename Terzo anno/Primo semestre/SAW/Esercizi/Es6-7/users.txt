@@ -1,0 +1,12 @@
+Kevin;Levin;kevin@gmail.com;$2y$10$eTB.2xqolJ3sbvt57ZMpuuNxbPxdcDNofU4LgYZVBPDBLh5aWVLx2;
+Mario;Rossi;mario@gmail.com;$2y$10$0tQZgXeKlTfotb8QJkUvoOWUlsyDejvat/KR4cg5Ta2/y70mJHVbe;
+Luisa;Naro;issah@gmail.com;$2y$10$sMZhxYEF269QoxyRpr1ItO39MeoWh6z0QaDdgUo9CuaGUPGgCxBXq;
+<script>alert(Hacked)</script>;x;y@gmail.com;$2y$10$tPgmKx87c8Mkh0.rWhtr7eigvdzMCx0sCk4foe6.QolCPcOjlLqZ.;
+c;<h1>Hacked</h1>;y@gmail.com;$2y$10$N4Gr3.Ll/wedhI6wo2VF9el2W4v4hWTGHTnLvokzuE3XGPpAkW0u6;
+c;<h1>Hacked</h1>;y@gmail.com;$2y$10$1Cbg.Kv8JIm1tp.XMwe.ROfSw5ATXufpoWYjWZhsDv4tJgDvYfMem;
+123;come;mi@gmal.com;$2y$10$c3P34vAtovD9rV5krBkca..VuuqaP1fcRQAx8tW14SDMqiTzi4U62;
+&lt;script&gt;alert(Hacked)&lt;/script&gt;;Luigi;y@gmail.com;$2y$10$n5nJ5ECaA3TvJN/43.Bv9ekcufnJqtZ2zQwcL/uitZ5rbJrDZHufS;
+&lt;script&gt;alert(Hacked)&lt;/script&gt;;Levin;y@gmail.com;$2y$10$7e4HfsLFcQyXjTBue15cteF0OdSl3eylcF7QyDhGhgRNFr94TxCge;
+&lt;script&gt;alert(Hacked)&lt;/script&gt;;Levin;y@gmail.com;$2y$10$CYWRmBwisXky27OfJe5HGelaJB1YbzfC4ccuz.jwk/aw8KqOsOoFK;
+Antonio;Pero;per@gmail.com;$2y$10$FAFnmVcNwi.QX5iNDlv/5ugH.wlUZWfX4T67S6esJyWhMxaoXSoi6;
+Antonio;Pero;per@gmail.com;$2y$10$lPYlKgnJXSH72wGaNMlGFOIKH.qXsc.xk8wfvlV5r2i1dfh1SuXO6;
