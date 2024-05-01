@@ -1,0 +1,56 @@
+Domande di FCQ 31/1 mattina:
+
+1: - Deutch, fase globale  che si introduce, perché stati normalizzati a 1/sqrt(2)
+    - A cosa serve il superdense coding
+2: - algoritmo o codice di correzione errori, correzioni errore (bit e phase flip, errori piccoli), perché non si puo' misurare Z1,Z2,Z3 separatamente (per non far collassare lo stato 
+       perché non sono autostati)
+     -  No cloning
+3: - Algoritmo o quantum game (mermin 1990) anche la teoria EPR e non localitá
+4: - Algoritmo o Crittografia (Groover), struttura per implementare groover
+     - Quantum teletrasportation
+5: - Algoritmo o Quantum game (Berstein-Vazirani)
+     - Codice correzione degli errori
+6: - Protocollo crittografico (BB84)
+7: - Quantum Game (Spin flip)
+     - Teletrasporto quantistico
+8: - protocollo crittografico (BB84)
+     - superdense coding
+	 
+------------------------------------
+
+domande orale 14 gennaio (quelle fino al mio esame compreso, poi sono fuggito)
+[12:16]
++ Codici di correzione degli errori, parla di quello che vuoi (domanda molto tranquilla)
++ Ho visto che hai misurato un operatore, ma in meccanica quantistica non distruggiamo l' informazione quando facciamo una misura?
+
+---
+
++ Un algoritmo a tua scelta (ha scelto Deutch)
++ Cosa e' matematicamente l' applicazione di Uf allo stato |x>|-> ?
++ No cloning theorem
+
+---
+
++ Parla del protocollo crittografico che vuoi tu (ha scelto BB84)
++ Parla velocemente del superdense coding
+
+---
+
++ Quantum game o un algortimo (ha scelto quantum game, dilemma del prigioniero)
++ Quantum teleportation protocol (inquadra il problema)
+
+---
+
++ Un algoritmo quantistico a tua scelta (ha scelto Bernstein-Vazirani)
++ Classicamente perche' ti bastano n chiamate, come lo implementeresti?
++ No cloning theorem
+
+---
+
++ Parla dei codici di correzione degli errori
++ Descrivi brevemente l' algoritmo di Deutch
+
+---
+
++ Algoritmo di Grover
++ Superdense coding e perche' puoi codificare piu' informazione
