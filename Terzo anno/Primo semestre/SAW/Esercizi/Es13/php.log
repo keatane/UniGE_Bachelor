@@ -1,0 +1,3 @@
+[18-Nov-2022 15:59:16 Europe/Berlin] Error: Column 'Lastname' cannot be null
+[18-Nov-2022 15:59:41 Europe/Berlin] Error: Duplicate entry 'mario.rossi@gmail.com' for key 'Email'
+[18-Nov-2022 16:01:21 Europe/Berlin] Error: Duplicate entry 'mario.rossi@gmail.com' for key 'Email' 1062

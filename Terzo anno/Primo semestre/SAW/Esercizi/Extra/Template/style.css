@@ -1,0 +1,111 @@
+body{
+    background-color: rgb(252, 248, 207);
+}
+
+form{
+    margin: auto;
+}
+
+input{
+    height: 2em;
+    width: 20em;
+    border: solid, 2px;
+    border-color: rgb(116, 38, 33);
+    border-radius: 5px;
+}
+
+h1{
+    font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2{
+    font-size: 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(116, 38, 33);
+}
+
+h3{
+    text-align: center;
+}
+
+button{
+    background-color: rgb(116, 38, 33);
+    border-radius: 5px;
+    border-color: rgb(116, 38, 33);
+    color: whitesmoke;
+    width: 20em;
+    height: 2.5em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+footer {
+	width: 100%;
+    border-top: solid 2px rgb(116, 38, 33);
+    border-bottom: solid 2px rgb(116, 38, 33);
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+  	flex-shrink: 0;
+    position: absolute;
+    bottom: 2px;
+} 
+
+.header-container{
+    background-color: rgb(116, 38, 33);
+    color: whitesmoke;
+    text-align: center;
+    border-radius: 15px;
+    margin: 0.2em;
+    height: 4em;
+    position: relative;
+}
+
+.vertical-center {
+    margin: 0;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.nav-container{
+    background-color: wheat;
+    text-align: center;
+    border-radius: 15px;
+    height: 2em;
+}
+
+.nav-text{
+    font-size: 1.1em;
+    color: rgb(116, 38, 33);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.form-container {
+    background-color: wheat;
+    width: 50%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.center{
+    margin: auto;
+    width: 30%;
+    padding: 10px;
+}
+
+a:hover{
+    color: orangered;
+}
+
+a:visited{
+    color: rgb(116, 38, 33);
+}
+
+button:hover{
+    background-color: rgb(78, 25, 21);
+}
