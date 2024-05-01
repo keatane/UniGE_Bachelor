@@ -1,0 +1,50 @@
+public class File implements FSTree {
+	private int size; // invariant size >= 0
+
+	public File(int size) {
+		if(size<0)
+			throw new IllegalArgumentException("File size cannot be negative");
+		this.size = size;
+	}
+
+	@Override
+	public <T> T accept(Visitor<T> v) {
+		return v.visitFile(size);
+	}
+}
+
+public class Folder implements FSTree {
+	private final List<FSTree> children = new LinkedList<>();
+
+	public Folder(FSTree... children) {
+		for (var node : children)
+			this.children.add(requireNonNull(node));
+	}
+
+	@Override
+	public <T> T accept(Visitor<T> v) {
+		return v.visitFolder(children);
+	}
+}
+
+// conta tutti i file con size > minSize
+public class FilesGreater implements Visitor<Integer> {
+	private final int minSize; // puo` essere negativo
+
+	public FilesGreater(int minSize) {
+		this.minSize = minSize;
+	}
+
+	@Override
+	public Integer visitFile(int size) {
+		return size > minSize ? 1 : 0;
+	}
+
+	@Override
+	public Integer visitFolder(List<FSTree> children) {
+		var res = 0;
+		for (var node : children)
+			res += node.accept(this);
+		return res;
+	}
+}

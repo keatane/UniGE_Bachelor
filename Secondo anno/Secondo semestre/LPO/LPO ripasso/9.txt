@@ -1,0 +1,33 @@
+public class Multiples implements Iterator<Integer>, Iterable<Integer> {
+
+	private final int step;
+	private final int max;
+	private int next;
+
+	public Multiples(int step, int items) {
+		if (step <= 0 || items < 0)
+			throw new IllegalArgumentException();
+		this.step = this.next = step;
+		this.max = step * items;
+	}
+
+	@Override
+	public boolean hasNext() {
+		return next <= max;
+	}
+
+	@Override
+	public Integer next() {
+		if (!hasNext())
+			throw new NoSuchElementException();
+		int res = next;
+		next += step;
+		return res;
+	}
+
+	@Override
+	public Iterator<Integer> iterator() {
+		return this;
+	}
+
+}

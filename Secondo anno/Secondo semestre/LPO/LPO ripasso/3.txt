@@ -1,0 +1,29 @@
+class CharSeqIterator implements Iterator<Character>, Iterable<Character> {
+
+	private final CharSequence charSeq; // invariant charSeq != null
+	private final int length;
+	private int index;
+
+	public CharSeqIterator(CharSequence charSeq) {
+		this.charSeq = requireNonNull(charSeq); 
+		length = charSeq.length();
+	}
+
+	@Override
+	public boolean hasNext() {
+		return index < length;
+	}
+
+	@Override
+	public Character next() {
+		if (!hasNext())
+			throw new NoSuchElementException();
+		return charSeq.charAt(index++);
+	}
+
+	@Override
+	public Iterator<Character> iterator() {
+		return this;
+	}
+
+}

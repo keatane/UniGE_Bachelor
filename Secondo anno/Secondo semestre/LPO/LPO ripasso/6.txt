@@ -1,0 +1,46 @@
+// valori primitivi generici
+public abstract class PrimVal<T> implements Value {
+	protected T val;
+	// invariante di classe: val!=null
+
+	protected PrimVal(T val) {
+		this.val = requireNonNull(val);
+	}
+}
+
+public class StringVal extends PrimVal<String> {
+
+	protected StringVal(String val) { super(val); }
+
+	@Override
+	public String asString() { return val; }
+}
+
+public class IntVal extends PrimVal<Integer> {
+	protected IntVal(Integer val) { super(val); }
+
+	@Override
+	public int asInt() { return val; }
+}
+
+public class Eval implements Visitor<Value> {
+
+	@Override
+	public Value visitIntLit(int val) {
+		return new IntVal(val);
+	}
+
+	@Override
+	public Value visitStringLit(String val) {
+		return new StringVal(val);
+	}
+
+	@Override
+	public Value visitTimes(Exp left, Exp right) {
+		// left si deve valutare in una stringa
+		// right si deve valutare in un intero
+		String s = left.accept(this).asString();
+		int i = right.accept(this).asInt();
+		return new StringVal(s.repeat(i));
+	}
+}

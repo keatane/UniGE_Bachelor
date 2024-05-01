@@ -1,0 +1,44 @@
+class RangeIterator implements Iterator<Integer>, Iterable<Integer> {
+
+	private int next;
+	private final int end, step; // invariant step!=0
+
+	// ranges from start (inclusive) to end (exclusive) with step!=0
+	public RangeIterator(int start, int end, int step) {
+		if (step == 0)
+			throw new IllegalArgumentException("Step cannot be 0");
+		this.next = start;
+		this.end = end;
+		this.step = step;
+	}
+
+	// ranges from start (inclusive) to end (exclusive) with step 1
+	public RangeIterator(int start, int end) {
+		this(start, end, 1);
+	}
+
+	// ranges from 0 (inclusive) to end (exclusive) with step 1
+	public RangeIterator(int end) {
+		this(0, end);
+	}
+
+	@Override
+	public boolean hasNext() {
+		return step > 0 ? next < end : next > end;
+	}
+
+	@Override
+	public Integer next() {
+		if (!hasNext())
+			throw new NoSuchElementException();
+		var res = next;
+		next += step;
+		return res;
+	}
+
+	@Override
+	public Iterator<Integer> iterator() {
+		return this;
+	}
+
+}

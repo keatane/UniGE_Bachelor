@@ -1,0 +1,49 @@
+public class BoolLit implements AST {
+	private final boolean value;
+
+	public BoolLit(boolean value) {
+		this.value = value;
+	}
+
+	@Override
+	public <T> T accept(Visitor<T> v) {
+		return v.visitBoolLit(value);
+	}
+}
+public class And implements AST {
+	private final AST left, right;
+
+	public And(AST left, AST right) {
+		this.left = requireNonNull(left);
+		this.right = requireNonNull(right);
+	}
+
+	@Override
+	public <T> T accept(Visitor<T> v) {
+		return v.visitAnd(left, right);
+	}
+}
+public class Eval implements Visitor<Boolean> {
+
+	@Override
+	public Boolean visitBoolLit(boolean b) {
+		return b;
+	}
+
+	@Override
+	public Boolean visitAnd(AST left, AST right) {
+		return left.accept(this) && right.accept(this);
+	}
+}
+public class ToString implements Visitor<String> {
+
+	@Override
+	public String visitBoolLit(boolean b) {
+		return String.valueOf(b);
+	}
+
+	@Override
+	public String visitAnd(AST left, AST right) {
+		return left.accept(this) + " " + right.accept(this) + " &&";
+	}
+}

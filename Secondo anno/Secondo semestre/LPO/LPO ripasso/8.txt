@@ -1,0 +1,38 @@
+public class Powers implements Iterator<Integer>, Iterable<Integer> {
+
+	private final int base; // base dell'esponente
+
+	private int items; // numero di elementi ancora da generare
+
+	private int next; // prossimo elemento da restituire
+
+	// precondizione: items >= 0
+	public Powers(int base, int items) {
+		if (items < 0)
+			throw new IllegalArgumentException();
+		this.base = this.next = base;
+		this.items = items;
+	}
+
+	@Override
+	public boolean hasNext() {
+		return items > 0;
+	}
+
+	@Override
+	public Integer next() {
+		if (!hasNext())
+			throw new NoSuchElementException();
+		int res = next;
+		next *= base;
+		items--;
+		return res;
+	}
+
+    // restituisce se stesso	
+	@Override
+	public Iterator<Integer> iterator() {
+		return this;
+	}
+
+}

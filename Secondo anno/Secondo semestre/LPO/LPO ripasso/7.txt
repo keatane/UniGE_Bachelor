@@ -1,0 +1,48 @@
+public class PosLit implements Exp { // nodi AST per literal interi positivi
+	private final int val;
+
+	// precondizione: val > 0
+	public PosLit(int val) {
+		if (val <= 0)
+			throw new IllegalArgumentException("Literal must be positive");
+		this.val = val;
+	}
+
+	@Override
+	public <T> T accept(Visitor<T> visitor) {
+		return visitor.visitNatLit(val);
+	}
+}
+public class Pow implements Exp { // nodi AST per elevamento a potenza
+	private final Exp left; // base
+	private final Exp right; // potenza
+
+	// precondizione: left!=null, right!=null
+	public Pow(Exp left, Exp right) {
+		this.left = requireNonNull(left);
+		this.right = requireNonNull(right);
+
+	}
+
+	@Override
+	public <T> T accept(Visitor<T> visitor) {
+		return visitor.visitPow(left, right);
+	}
+}
+public class Eval implements Visitor<Integer> {
+	@Override
+	public Integer visitNatLit(int val) {
+		return val;
+	}
+
+	@Override
+	public Integer visitPow(Exp left, Exp right) {
+		int base = left.accept(this);
+		int exp = right.accept(this);
+		int res;
+		for (res = 1; exp > 0; exp--)
+			res *= base;
+		return res;
+	}
+}
+

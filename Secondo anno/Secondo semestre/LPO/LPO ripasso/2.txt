@@ -1,0 +1,51 @@
+public class Leaf extends BSTree {
+
+	public Leaf(int value) {
+		super(value);
+	}
+
+	@Override
+	public <T> T accept(Visitor<T> v) {
+		return v.visitLeaf(value);
+	}
+}
+
+public class Node extends BSTree {
+
+	private final BSTree left, right; 
+
+	public Node(int value, BSTree left, BSTree right) {
+		super(value);
+		if(left==null && right==null) throw new NullPointerException();
+		this.left = left;
+		this.right = right;
+	}
+
+	@Override
+	public <T> T accept(Visitor<T> v) {
+		return v.visitNode(value, left, right);
+	}
+}
+
+public class Search implements Visitor<Boolean> {
+	private final int searchedValue;
+
+	public Search(int searchedValue) {
+		this.searchedValue = searchedValue;
+	}
+
+	@Override
+	public Boolean visitLeaf(int value) {
+		return value == searchedValue;
+	}
+
+	@Override
+	public Boolean visitNode(int value, BSTree left, BSTree right) {
+		if (searchedValue < value)
+			return left != null && left.accept(this);
+		else
+			return value == searchedValue || right != null && right.accept(this);
+OPPURE:
+ if (value > SearchedValue && left != null) return left.accept(this);
+    if (value < SearchedValue && right != null) return right.accept(this);
+    return value == searchedValue;
