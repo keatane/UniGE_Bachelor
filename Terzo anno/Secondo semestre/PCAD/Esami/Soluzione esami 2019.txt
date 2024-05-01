@@ -1,0 +1,63 @@
+---------------------------- ESAME 14 GIUGNO 2019 -------------------------------
+
+1-6 FFFV. FFVF VFFF FVFF FVVF FVVF 
+
+7-9 FFFF FFFV FFFF
+
+10 VFVF
+
+11 vedi lucidi su High Level Concurrency
+
+12 vedi lucidi su Alg. Distribuiti
+
+
+--------------------- ESAME 1 LUGLIO 2019 ----------------------
+
+1-6 VFFF VFFF FVFV FFFF FFVV FVVF 
+
+7-9 FFFV VFFF FFFF 
+
+10 VVVV
+
+Es 1 
+
+Possibile implementazione
+
+Globali
+mutex mut; condition cond;
+int waiting, max;
+void barrier_init(int x){ max = x; }
+void barrier_wait() {
+  lock(mut); 
+  waiting ++;
+  if   (waiting == max){ waiting = 0; signal_all(cond);
+  else  wait(cond,mut)
+  unlock(mut);
+}
+
+Es 2 vedi lucidi su Alg. Distribuiti
+
+Differenza principale:
+
+Scalari identificano solo eventi ordinati happens-before, 
+
+Vettoriali anche eventi indipendenti
+
+
+----------------------------- ESAME 18 LUGLIO 2019 -----------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,167 @@
+ESAME DATO DA Armando
+--------------------
+D1
+F
+F
+F
+V
+
+D2
+V
+F
+V
+F
+
+D3
+F
+V
+F
+F
+
+D4
+V
+F
+F
+V
+
+D5
+F perchè no semaforo bin
+V
+F
+F?
+
+D6
+F
+V
+V
+V
+
+D7
+V
+F
+F
+F
+
+D8
+F
+F
+F
+F
+
+D9
+F
+F
+V
+V
+
+D10
+F
+V
+F
+V/F
+
+TESTO_ESAME_18_Luglio_2019.pdf
+1: V F V V
+2: V F V F(o V tutte se si considerano anche cswitch dyn e le interrupt)
+3: F V F F
+4:
+5: F F F V
+6: V V V F
+7: F F V V
+8: F F F V
+9:
+10:
+
+2022 Giugno 21 - ES 3
+(Versione no var cond)
+---------------------
+Semaphore s(1);
+int nReaders = 0;
+
+read(){
+   s.down();
+   ++nReaders;
+   s.up();
+   read_val();
+   s.down();
+   --nReaders;
+   s.up();
+}
+
+write(){
+    while(true){
+        s.down();
+        if (nReaders == 0)
+            break;
+        s.up();
+    }
+    
+   write_val();
+   s.up();
+}
+---------
+(Versione con var cond)
+---------
+Semaphore s(1);
+int nReaders = 0;
+
+read(){
+   s.down();
+   ++nReaders;
+   s.up();
+   read_val();
+   s.down();
+   --nReaders;
+   if (nReaders == 0)
+       signal(); // assocaito al semaforo???
+   s.up();
+}
+
+write(){
+    s.down();
+    while(nReaders != 0)
+        await(); // associato al semforo???
+    
+   write_val();
+   s.up();
+}
+---------
+2019 settembre 11
+---------------------
+1: F F F V
+2: F F V F
+3: V F V F
+4: F F F F
+5: F V F F
+6: F V V F
+7: la seconda stampa sempre 8, la prima a random
+8: F F F V
+9: 
+10: V V V F
+---------
+1 luglio 19
+-----
+1: V F F F
+2: V F F F
+3: F V ? V 
+4: F F F F
+5: F F V V
+6: F V V F
+7: F F ? V
+8: V F F F
+9: 
+10: V tutto
+--------------
+2018 ottobre
+-----------
+1: F F F F
+2: V F F F
+3: F V F F
+4: F V F V?
+5: V V V F
+6: F F (V) F 
+7: F F F F
+8: F V F F
+9: F V F V
+10: V F F F
+12: V V V V

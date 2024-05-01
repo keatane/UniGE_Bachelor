@@ -1,0 +1,5 @@
+Esercizio 1:
+Descrivere una possibile implementazione con sintassi stile Java di un Thread Pool senza usare Executors etc.
+
+Esercizio 2:
+Partendo dall’algoritmo di Peterson per 2 thread scrivere una sua estensione per risolvere il problema della sezione critica per 4 thread usando uno schema a torneo (semifinali e finale).
