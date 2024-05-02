@@ -1,4 +1,5 @@
-# Percorso triennale in UniGE - Informatica (Bachelor)
+# Percorso triennale in UniGE - Informatica (Bachelor)  
+a.a. 2020/21, 2021/22, 2022/23
 ## Di cosa si tratta?
 Questa repository contiene il lavoro di tre anni di permanenza all'Università di Genova.
 
