@@ -14,7 +14,8 @@ Un pacchetto completo di:
 - note personali e strategie utilizzate per ripassare per i vari corsi
 
 ## Gratis?
-Sì, il tutto è pubblicato gratuitamente, secondo i principi della licenza open-source. Nel caso il codice fosse utile e/o ri-utilizzato vi prego di riferirlo, per spargere la voce ed aiutare altrettante persone.
+Sì, il tutto è pubblicato gratuitamente, secondo i principi della licenza open-source. Nel caso il codice fosse utile e/o ri-utilizzato vi prego di riferirlo, per spargere la voce ed aiutare altrettante persone.  
+Non mi ritengo responsabile di eventuali usi impropri del materiale fornito gratuitamente.
 
 ## Perché?
 Perché no? Dopotutto aiutare non fa mai male e così si obbliga UniGE a portare roba nuova...
